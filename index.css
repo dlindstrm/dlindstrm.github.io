@@ -1,11 +1,13 @@
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  color: #1B1142;
+  color: #003945;
 }
 
-#navbar-brand-title {
+/* #navbar-brand-title {
   color: #fff;
-}
+} */
+
+button:focus {outline:0;}
 
 .logo-grey {
   opacity: 0.3;
@@ -23,32 +25,33 @@ header .navbar-toggler {
   border: none;
 }
 
+header .navbar-toggler.nav-close {
+  z-index: 10000;
+}
+
 header .nav-button-container {
-  width: 40px;
+  height: 30px;
+  width: 35px;
   display: inline-block;
   position: relative;
 }
 
-header .nav-button-container.hamburger-button {
-  height: 40px;
-}
-
-header .nav-button-container.hamburger-button span::before,
+header .navbar-toggler:not(.nav-close) .nav-button-container span::before,
 header .nav-button-container span::after {
   display: block;
   content: '';
 }
 
-header .nav-button-container.hamburger-button span {
+header .nav-button-container span {
   top: 50%;
   margin-top: -1px;
 }
 
-header .nav-button-container.hamburger-button span::before {
+header .nav-button-container span::before {
   top: -10px;
 }
 
-header .nav-button-container.hamburger-button span::after {
+header .nav-button-container span::after {
   bottom: -10px;
 }
 
@@ -58,24 +61,26 @@ header .nav-button-container span::after {
   height: 2px;
   left: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #003945;
   position: absolute;
 }
 
-header .nav-button-container.close-button {
-  height: 40px;
+header .navbar-toggler.nav-close .nav-button-container span,
+header .navbar-toggler.nav-close .nav-button-container span::before,
+header .navbar-toggler.nav-close .nav-button-container span::after {
+  background-color: #f2f2f2;
 }
 
-header .nav-button-container.close-button span,
-header .nav-button-container.close-button span::after {
+header .navbar-toggler.nav-close .nav-button-container span,
+header .navbar-toggler.nav-close .nav-button-container span::after {
   top: 50%;
 }
 
-header .nav-button-container.close-button span {
+header .navbar-toggler.nav-close .nav-button-container span {
   transform: rotate(45deg);
 }
 
-header .nav-button-container.close-button span::after {
+header .navbar-toggler.nav-close .nav-button-container span::after {
   transform: rotate(90deg);
 }
 
@@ -101,23 +106,23 @@ header .collapsing {
 }
 
 section.section-masthead {
-  color: #ccc;
   padding-top: calc(6vh + 100px);
-  background-color: #0e0012;
+  background-color: #f2f2f2;
+  /* background-color: #0e0012;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 800'%3E%3Cg %3E%3Ccircle fill='%230e0012' cx='400' cy='400' r='600'/%3E%3Ccircle fill='%23130217' cx='400' cy='400' r='500'/%3E%3Ccircle fill='%2317051c' cx='400' cy='400' r='400'/%3E%3Ccircle fill='%231a0821' cx='400' cy='400' r='300'/%3E%3Ccircle fill='%231c0a26' cx='400' cy='400' r='200'/%3E%3Ccircle fill='%231f0c2b' cx='400' cy='400' r='100'/%3E%3C/g%3E%3C/svg%3E");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; */
 }
 
 section.section-masthead h1 {
   font-size: 4rem;
-  color: #f2f2f2;
+  /* color: #f2f2f2; */
 }
 
 section.section-masthead form {
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: #fff;
 }
 
 section.section-masthead form .form-title {
@@ -149,7 +154,7 @@ section.section-masthead::after {
   font-weight: 700;
   letter-spacing: 0.5px;
   font-size: 0.9rem;
-  color: #1b114299;
+  color: #1fc0b2;
 }
 
 section.section-features::after {
@@ -178,11 +183,11 @@ section.section-pricing {
 }
 
 #price-title-pro {
-  color: var(--primary)
+  color: #1ec4b4;
 }
 
 #price-title-premium {
-  color: #F44C7C;
+  color: var(--primary);
 }
 
 section.section-pricing ul {
@@ -206,7 +211,7 @@ section.section-pricing li.pricing-li-active::before {
   position: absolute;
   left: 10px;
   font-weight: 700;
-  color: var(--success);
+  color: #1ec4b4;
 }
 
 section.section-pricing::after {
@@ -246,7 +251,7 @@ footer a {
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: #1B1142;
+    background-color: #003945;
   }
   header .navbar-collapse.show .navbar-nav {
     height: 100%;
@@ -263,5 +268,6 @@ footer a {
   header .navbar-collapse.show .navbar-nav .nav-item .nav-link {
     font-size: 2rem;
     text-align: center;
+    color: #f2f2f2;
   }
 }
