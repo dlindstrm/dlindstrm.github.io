@@ -26,7 +26,7 @@ header .navbar-toggler {
 }
 
 header .navbar-toggler.nav-close {
-  z-index: 10000;
+  z-index: 1000;
 }
 
 header .nav-button-container {
@@ -238,6 +238,35 @@ footer a {
   color: #ccc;
 }
 
+#sign-up-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  display: none;
+}
+
+#sign-up-modal.show {
+  display: flex;
+}
+
+#sign-up-modal .modal-backdrop {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#sign-up-modal form {
+  max-width: 500px;
+  background-color: #fff;
+  z-index: 11000;
+}
+
 .btn {
   font-size: 0.7rem;
   padding: 0.75rem 2rem;
@@ -245,6 +274,10 @@ footer a {
 }
 
 @media (max-width: 767px) {
+  header.nav-open {
+    position: fixed;
+  }
+
   header .navbar-collapse.show {
     position: fixed;
     top: 0;
